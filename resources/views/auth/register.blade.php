@@ -65,7 +65,7 @@
                                         <i class="now-ui-icons users_circle-08"></i>
                                     </div>
                                 </div>
-                                <input class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" type="text" name="name" value="{{ old('name') }}" required autofocus />
+                                <input class="form-control @error('name') is-invalid @enderror" placeholder="{{ __('Name') }}" type="text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus />
                                 @if ($errors->has('name'))
                                 <span class="invalid-feedback" style="display: block;" role="alert">
                                     <strong>{{ $errors->first('name') }}</strong>
@@ -79,7 +79,7 @@
                                         <i class="now-ui-icons ui-1_email-85"></i>
                                     </div>
                                 </div>
-                                <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}" type="email" name="email" value="{{ old('email') }}" required />
+                                <input class="form-control @error('email') is-invalid @enderror" placeholder="{{ __('Email') }}" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" />
                             </div>
                             @if ($errors->has('email'))
                             <span class="invalid-feedback" style="display: block;" role="alert">
@@ -95,7 +95,7 @@
                                         <i class="now-ui-icons objects_key-25"></i>
                                     </div>
                                 </div>
-                                <input class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ __('Password') }}" type="password" name="password" required />
+                                <input class="form-control @error('password') is-invalid @enderror" placeholder="{{ __('Password') }}" type="password" name="password" required autocomplete="new-password" />
                                 @if ($errors->has('password'))
                                 <span class="invalid-feedback" style="display: block;" role="alert">
                                     <strong>{{ $errors->first('password') }}</strong>
@@ -109,7 +109,7 @@
                                         <i class="now-ui-icons objects_key-25"></i>
                                     </div>
                                 </div>
-                                <input class="form-control" placeholder="{{ __('Confirm Password') }}" type="password" name="password_confirmation" required />
+                                <input id="password-confirm" class="form-control" placeholder="{{ __('Confirm Password') }}" type="password" name="password_confirmation" required autocomplete="new-password" />
                             </div>
                             <!--<div class="form-check text-left">
                                 <label class="form-check-label">

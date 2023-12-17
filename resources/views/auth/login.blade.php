@@ -38,7 +38,7 @@
                                     <i class="now-ui-icons users_circle-08"></i>
                                 </div>
                             </span>
-                            <input class="form-control text-light {{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}" type="email" name="email" value="{{ old('email', '') }}" required autofocus />
+                            <input class="form-control text-light @error('email') is-invalid @enderror" placeholder="{{ __('Email') }}" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus />
                         </div>
                         @if ($errors->has('email'))
                         <span class="invalid-feedback" style="display: block;" role="alert">
@@ -51,7 +51,7 @@
                                     <i class="now-ui-icons objects_key-25"></i>
                                 </div>
                             </div>
-                            <input placeholder="Password" class="form-control text-light {{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{ __('Password') }}" type="password" value="secret" required />
+                            <input placeholder="Password" class="form-control text-light @error('password') is-invalid @enderror" name="password" placeholder="{{ __('Password') }}" type="password" required autocomplete="current-password" />
                         </div>
                         @if ($errors->has('password'))
                         <span class="invalid-feedback" style="display: block;" role="alert">

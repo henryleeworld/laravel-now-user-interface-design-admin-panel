@@ -26,7 +26,7 @@
                                     <i class="now-ui-icons users_circle-08"></i>
                                 </div>
                             </span>
-                            <input id="email" type="email" class="form-control text-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="{{ __('Email') }}" />
+                            <input id="email" type="email" class="form-control text-light @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" placeholder="{{ __('Email') }}" required autocomplete="email" autofocus />
                         </div>
                         @error('email')
                         <span class="invalid-feedback" role="alert">
@@ -39,7 +39,7 @@
                                     <i class="now-ui-icons objects_key-25"></i>
                                 </div>
                             </div>
-                            <input id="password" type="password" class="form-control text-light @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="{{ __('Password') }}" required />
+                            <input id="password" type="password" class="form-control text-light @error('password') is-invalid @enderror" name="password" placeholder="{{ __('Password') }}" required autocomplete="new-password" />
                         </div>
                         @if ($errors->has('password'))
                         <span class="invalid-feedback" style="display: block;" role="alert">
@@ -52,7 +52,7 @@
                                     <i class="now-ui-icons objects_key-25"></i>
                                 </div>
                             </div>
-                            <input id="password-confirm" type="password" class="form-control text-light" name="password_confirmation" required autocomplete="new-password" placeholder="{{ __('Confirm Password') }}" />
+                            <input id="password-confirm" type="password" class="form-control text-light" name="password_confirmation" placeholder="{{ __('Confirm Password') }}" required autocomplete="new-password" />
                         </div>
                         @if ($errors->has('password'))
                         <span class="invalid-feedback" style="display: block;" role="alert">

@@ -25,7 +25,7 @@
                                     <i class="now-ui-icons users_circle-08"></i>
                                 </div>
                             </span>
-                            <input id="email" type="email" class="form-control text-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="{{ __('Email') }} autofocus />
+                            <input id="email" type="email" class="form-control text-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="{{ __('Email') }}" required autocomplete="email" autofocus />
                         </div>
                         @error('email')
                         <span style="display: block;" class="invalid-feedback" role="alert">

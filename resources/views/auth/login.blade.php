@@ -51,7 +51,7 @@
                                     <i class="now-ui-icons objects_key-25"></i>
                                 </div>
                             </div>
-                            <input placeholder="Password" class="form-control text-light @error('password') is-invalid @enderror" name="password" placeholder="{{ __('Password') }}" type="password" required autocomplete="current-password" />
+                            <input placeholder="{{ __('Password') }}" class="form-control text-light @error('password') is-invalid @enderror" name="password" placeholder="{{ __('Password') }}" type="password" required autocomplete="current-password" />
                         </div>
                         @if ($errors->has('password'))
                         <span class="invalid-feedback" style="display: block;" role="alert">
